@@ -1,0 +1,16 @@
+import os
+
+rootPath = 'C:\\CLD\\'
+
+file = open('docs.csv', 'r')
+
+for line in file:
+        tempPath = rootPath
+        path = line.strip().split('\\')
+        for i in path:
+            tempPath = os.path.join(tempPath,i)
+            if os.path.exists(tempPath) == False:
+                print('making path')
+                os.mkdir(tempPath)
+            else:
+                print(tempPath)
