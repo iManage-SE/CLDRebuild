@@ -1,0 +1,61 @@
+import os, shutil
+
+rootPath = 'C:\\CLD\\'
+pdf = 'C:\\Users\\workadmin\\Desktop\\sample.pdf'
+doc = 'C:\\Users\\workadmin\\Desktop\\Testing.docx'
+
+file = open('docs.csv', 'r')
+
+for line in file:
+        #tempPath = rootPath
+        path = line.strip().split('\\')
+        tempPath = os.path.join(rootPath,path[0])
+        if os.path.exists(tempPath) == False:
+            print('making path')
+            os.mkdir(tempPath)
+        else:
+            print(tempPath)
+        
+        tempPath = os.path.join(tempPath,path[1])
+        if os.path.exists(tempPath) == False:
+            print('making path')
+            os.mkdir(tempPath)
+        else:
+            print(tempPath)
+        
+        tempPath = os.path.join(tempPath,path[2])
+        if os.path.exists(tempPath) == False:
+            print('making path')
+            os.mkdir(tempPath)
+        else:
+            print(tempPath)
+        
+        tempPath = os.path.join(tempPath,path[3])
+        if os.path.exists(tempPath) == False:
+            print('making path')
+            os.mkdir(tempPath)
+        else:
+            print(tempPath)
+            
+        tempPath = os.path.join(tempPath,path[4])
+        if os.path.exists(tempPath) == False:
+            print('making path')
+            os.mkdir(tempPath)
+        else:
+            print(tempPath)
+            
+        tempPath = os.path.join(tempPath,path[5])
+        if os.path.exists(tempPath) == False:
+            print('making path')
+            os.mkdir(tempPath)
+        else:
+            print(tempPath)
+            
+        tempPath = os.path.join(tempPath,path[6])
+        if os.path.exists(tempPath) == False:
+            print('making path')
+            os.mkdir(tempPath)
+            shutil.copy(, tempPath)
+        else:
+            print(tempPath)
+
